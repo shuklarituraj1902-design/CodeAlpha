@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class StockTradingPlatform {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
 
         String stockName = "TCS";
         double stockPrice = 3500;
@@ -18,7 +18,7 @@ public class StockTradingPlatform {
             System.out.println("4. Portfolio");
             System.out.println("5. Exit");
             System.out.print("Enter Choice: ");
-            choice = sc.nextInt();
+            choice = s.nextInt();
 
             switch(choice) {
                 case 1:
@@ -28,7 +28,7 @@ public class StockTradingPlatform {
 
                 case 2:
                     System.out.print("Enter Quantity to Buy: ");
-                    qty = sc.nextInt();
+                    qty = s.nextInt();
 
                     if(balance >= qty * stockPrice) {
                         shares += qty;
@@ -41,7 +41,7 @@ public class StockTradingPlatform {
 
                 case 3:
                     System.out.print("Enter Quantity to Sell: ");
-                    qty = sc.nextInt();
+                    qty = s.nextInt();
 
                     if(shares >= qty) {
                         shares -= qty;
